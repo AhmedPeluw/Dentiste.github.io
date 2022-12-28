@@ -1,5 +1,3 @@
-
-
 jQuery('.mm-prev-btn').hide();
 
 var x;
