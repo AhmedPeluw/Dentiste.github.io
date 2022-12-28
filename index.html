@@ -5,471 +5,126 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="home.css">
 </head>
 <body>
-
-<div class="container">
-    <div class="col-sm-12">
-        <div class="mm-survey">
-
-            <div class="mm-survey-progress">
-                <div class="mm-survey-progress-bar mm-progress"></div>
-            </div>
-
-            <div class="mm-survey-results">
-                <div class="mm-survey-results-container">
-                    <h3 class="mm-survey-results-score"></h3>
-                    <ul class="mm-survey-results-list"></ul>
-                </div>
-                <div class="mm-survey-results-controller">
-                    <div class="mm-back-btn">
-                        <button>Back</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mm-survey-bottom">
-                <div class="mm-survey-container">
-
-                    <div class="mm-survey-page active" data-page="1">
-                        <div class="mm-survery-content">
-                            <div class="mm-survey-question">
-                                <p>Based on history... What is the ideal color for a Ferrari?</p>
-                            </div>
-                            <div class="mm-survey-item">
-                                <input type="radio" id="radio01" data-item="1" name="radio1" value="red" />
-                                <label for="radio01"><span></span><p>Red</p></label>
-                            </div>
-                            <div class="mm-survey-item">
-                                <input type="radio" id="radio02" data-item="1" name="radio1" value="blue" />
-                                <label for="radio02"><span></span><p>Blue</p></label>
-                            </div>
-                            <div class="mm-survey-item">
-                                <input type="radio" id="radio03" data-item="1" name="radio1" value="green" />
-                                <label for="radio03"><span></span><p>Green</p></label>
-                            </div>
-                            <div class="mm-survey-item">
-                                <input type="radio" id="radio04" data-item="1" name="radio1" value="purple" />
-                                <label for="radio04"><span></span><p>Purple</p></label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mm-survey-page" data-page="2">
-                        <div class="mm-survery-content">
-                            <div class="mm-survey-question">
-                                <p>Which one of these car brands is made in Germany?</p>
-                            </div>
-                            <div class="mm-survey-item">
-                                <input type="radio" id="radio05" data-item="2" name="radio2" value="honda" />
-                                <label for="radio05"><span></span><p>Honda</p></label>
-                            </div>
-                            <div class="mm-survey-item">
-                                <input type="radio" id="radio06" data-item="2" name="radio2" value="ford" />
-                                <label for="radio06"><span></span><p>Ford</p></label>
-                            </div>
-                            <div class="mm-survey-item">
-                                <input type="radio" id="radio07" data-item="2" name="radio2" value="mercedes" />
-                                <label for="radio07"><span></span><p>Mercedes</p></label>
-                            </div>
-                            <div class="mm-survey-item">
-                                <input type="radio" id="radio08" data-item="2" name="radio2" value="ferrari" />
-                                <label for="radio08"><span></span><p>Ferrari</p></label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mm-survey-page" data-page="3">
-                        <div class="mm-survery-content">
-                            <div class="mm-survey-question">
-                                <p>Which is the correct integer for Pi?</p>
-                            </div>
-                            <div class="mm-survey-item">
-                                <input type="radio" id="radio09" data-item="3" name="radio3" value="3" />
-                                <label for="radio09"><span></span><p>3</p></label>
-                            </div>
-                            <div class="mm-survey-item">
-                                <input type="radio" id="radio10" data-item="3" name="radio3" value="4" />
-                                <label for="radio10"><span></span><p>4</p></label>
-                            </div>
-                            <div class="mm-survey-item">
-                                <input type="radio" id="radio11" data-item="3" name="radio3" value="3.41" />
-                                <label for="radio11"><span></span><p>3.41</p></label>
-                            </div>
-                            <div class="mm-survey-item">
-                                <input type="radio" id="radio12" data-item="3" name="radio3" value="3.14" />
-                                <label for="radio12"><span></span><p>3.14</p></label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mm-survey-page" data-page="4">
-                        <div class="mm-survery-content">
-                            <div class="mm-survey-question">
-                                <p>The letter 'C' is the nth number in the alphabet, choose the correct number.</p>
-                            </div>
-                            <div class="mm-survey-item">
-                                <input type="radio" id="radio13" data-item="4" name="radio4" value="1" />
-                                <label for="radio13"><span></span><p>1</p></label>
-                            </div>
-                            <div class="mm-survey-item">
-                                <input type="radio" id="radio14" data-item="4" name="radio4" value="2" />
-                                <label for="radio14"><span></span><p>2</p></label>
-                            </div>
-                            <div class="mm-survey-item">
-                                <input type="radio" id="radio15" data-item="4" name="radio4" value="3" />
-                                <label for="radio15"><span></span><p>3</p></label>
-                            </div>
-                            <div class="mm-survey-item">
-                                <input type="radio" id="radio16" data-item="4" name="radio4" value="4" />
-                                <label for="radio16"><span></span><p>4</p></label>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- <div class="mm-survey-page" data-page="5">
-                        <div class="mm-survery-content">
-
-                        </div>
-                    </div>
-                    <div class="mm-survey-page" data-page="6">
-                        <div class="mm-survery-content">
-
-                        </div>
-                    </div>
-                    <div class="mm-survey-page" data-page="7">
-                        <div class="mm-survery-content">
-
-                        </div>
-                    </div> -->
-
-                </div>
-
-                <div class="mm-survey-controller">
-                    <div class="mm-prev-btn">
-                        <button>Prev</button>
-                    </div>
-                    <div class="mm-next-btn">
-                        <button disabled="true">Next</button>
-                    </div>
-                    <div class="mm-finish-btn">
-                        <button>Submit</button>
-                    </div>
-                </div>
-            </div>
+    <header>
+      <h1 class="logo">Instrument</h1>
+      <input type="checkbox" class="nav-toggle" id="nav-toggle">
+      <nav>
+        <ul>
+          <li> <a href="">What We Do</a></li>
+          <li> <a href="">Who We Are</a></li>
+          <li> <a href="">Being Here</a></li>
+          <li> <a href="">Careers</a></li>
+        </ul>
+      </nav>
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span></span>
+      </label>
+    </header>
+    
+    <!-- Section One -->
+    
+    <section class="section-one">
+      <h2 class="header">Build. Grow. Serve.</h2>
+      <p class="section-one-paragraph">We are investing $3 million over the next three years Build|Grow|Serve program, created to support and empower Black underrepresented communities</p>
+      <a href="" class="learn-more-btn">Learn More </a> 
+    </section>
+    
+    <!-- Section Two -->
+    <section class="section=two">
+      <img src=https://images.unsplash.com/photo-1667826385031-2b4d06d686d8?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2Njk2MDMyODU&ixlib=rb-4.0.3&q=80>
+    </section>
+    
+    <!-- Section Three -->
+    <section class="section-three">
+      <h3>We enrich human lives through the thoughtful application of design and technology</h3>
+    </section>
+    
+    <!-- Section Four -->
+    <section class="section-four">
+      <div class="flex-group">
+        <div>
+          <img src=https://images.unsplash.com/photo-1667490111717-21a3d34c58d0?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2Njk2NzUwODU&ixlib=rb-4.0.3&q=80>
         </div>
-    </div>
-</div>
-
-<script>
-
-jQuery('.mm-prev-btn').hide();
-
-var x;
-var count;
-var current;
-var percent;
-var z = [];
-
-init();
-getCurrentSlide();
-goToNext();
-goToPrev();
-getCount();
-// checkStatus();
-// buttonConfig();
-buildStatus();
-deliverStatus();
-submitData();
-goBack();
-
-function init() {
+        <div class="content-container">
+          <p>In the summer of 2020, we reported our representation data and committed to doing so annually. One year later, we are please to share an update on our goals, and progress, and the work that still needs to be done.</p>
+          <a href="" class="learn-more-btn section-four-btn">Learn More</a>
+        </div>
+      </div>
+    </section>
     
-    jQuery('.mm-survey-container .mm-survey-page').each(function() {
-
-        var item;
-        var page;
-
-        item = jQuery(this);
-        page = item.data('page');
-
-        item.addClass('mm-page-'+page);
-        //item.html(page);
-
-    });
-
-}
-
-function getCount() {
-
-    count = jQuery('.mm-survey-page').length;
-    return count;
-
-}
-
-function goToNext() {
-
-    jQuery('.mm-next-btn').on('click', function() {
-        goToSlide(x);
-        getCount();
-        current = x + 1;
-        var g = current/count;
-        buildProgress(g);
-        var y = (count + 1);
-        getButtons();
-        jQuery('.mm-survey-page').removeClass('active');
-        jQuery('.mm-page-'+current).addClass('active');
-        getCurrentSlide();
-        checkStatus();
-        if( jQuery('.mm-page-'+count).hasClass('active') ){
-            if( jQuery('.mm-page-'+count).hasClass('pass') ) {
-                jQuery('.mm-finish-btn').addClass('active');
-            }
-            else {
-                jQuery('.mm-page-'+count+' .mm-survery-content .mm-survey-item').on('click', function() {
-                    jQuery('.mm-finish-btn').addClass('active');
-                });
-            }
-        }
-        else {
-            jQuery('.mm-finish-btn').removeClass('active');
-            if( jQuery('.mm-page-'+current).hasClass('pass') ) {
-                jQuery('.mm-survey-container').addClass('good');
-                jQuery('.mm-survey').addClass('okay');
-            }
-            else {
-                jQuery('.mm-survey-container').removeClass('good');
-                jQuery('.mm-survey').removeClass('okay');
-            }
-        }
-        buttonConfig();
-    });
-
-}
-
-function goToPrev() {
-
-    jQuery('.mm-prev-btn').on('click', function() {
-        goToSlide(x);
-        getCount();			
-        current = (x - 1);
-        var g = current/count;
-        buildProgress(g);
-        var y = count;
-        getButtons();
-        jQuery('.mm-survey-page').removeClass('active');
-        jQuery('.mm-page-'+current).addClass('active');
-        getCurrentSlide();
-        checkStatus();
-        jQuery('.mm-finish-btn').removeClass('active');
-        if( jQuery('.mm-page-'+current).hasClass('pass') ) {
-            jQuery('.mm-survey-container').addClass('good');
-            jQuery('.mm-survey').addClass('okay');
-        }
-        else {
-            jQuery('.mm-survey-container').removeClass('good');
-            jQuery('.mm-survey').removeClass('okay');
-        }
-        buttonConfig();
-    });
-
-}
-
-function buildProgress(g) {
-
-    if(g > 1){
-        g = g - 1;
-    }
-    else if (g === 0) {
-        g = 1;
-    }
-    g = g * 100;
-    jQuery('.mm-survey-progress-bar').css({ 'width' : g+'%' });
-
-}
-
-function goToSlide(x) {
-
-    return x;
-
-}
-
-function getCurrentSlide() {
-
-    jQuery('.mm-survey-page').each(function() {
-
-        var item;
-
-        item = jQuery(this);
-
-        if( jQuery(item).hasClass('active') ) {
-            x = item.data('page');
-        }
-        else {
-            
-        }
-
-        return x;
-
-    });
-
-}
-
-function getButtons() {
-
-    if(current === 0) {
-        current = y;
-    }
-    if(current === count) {
-        jQuery('.mm-next-btn').hide();
-    }
-    else if(current === 1) {
-        jQuery('.mm-prev-btn').hide();
-    }
-    else {
-        jQuery('.mm-next-btn').show();
-        jQuery('.mm-prev-btn').show();
-    }
-
-}
-
-jQuery('.mm-survey-q li input').each(function() {
-
-    var item;
-    item = jQuery(this);
-
-    jQuery(item).on('click', function() {
-        if( jQuery('input:checked').length > 0 ) {
-            // console.log(item.val());
-            jQuery('label').parent().removeClass('active');
-            item.closest( 'li' ).addClass('active');
-        }
-        else {
-            //
-        }
-    });
-
-});
-
-percent = (x/count) * 100;
-jQuery('.mm-survey-progress-bar').css({ 'width' : percent+'%' });
-
-function checkStatus() {
-    jQuery('.mm-survery-content .mm-survey-item').on('click', function() {
-        var item;
-        item = jQuery(this);
-        item.closest('.mm-survey-page').addClass('pass');
-    });
-}
-
-function buildStatus() {
-    jQuery('.mm-survery-content .mm-survey-item').on('click', function() {
-        var item;
-        item = jQuery(this);
-        item.addClass('bingo');
-        item.closest('.mm-survey-page').addClass('pass');
-        jQuery('.mm-survey-container').addClass('good');
-    });
-}
-
-function deliverStatus() {
-    jQuery('.mm-survey-item').on('click', function() {
-        if( jQuery('.mm-survey-container').hasClass('good') ){
-            jQuery('.mm-survey').addClass('okay');
-        }
-        else {
-            jQuery('.mm-survey').removeClass('okay');	
-        }
-        buttonConfig();
-    });
-}
-
-function lastPage() {
-    if( jQuery('.mm-next-btn').hasClass('cool') ) {
-        alert('cool');
-    }
-}
-
-function buttonConfig() {
-    if( jQuery('.mm-survey').hasClass('okay') ) {
-        jQuery('.mm-next-btn button').prop('disabled', false);
-    }
-    else {
-        jQuery('.mm-next-btn button').prop('disabled', true);
-    }
-}
-
-function submitData() {
-    jQuery('.mm-finish-btn').on('click', function() {
-        collectData();
-        jQuery('.mm-survey-bottom').slideUp();
-        jQuery('.mm-survey-results').slideDown();
-    });
-}
-
-function collectData() {
+    <!-- Section Five -->
+    <section class="section-five">
+      <div class="flex-group section-five-flex-group">
+        <div>
+          <img src=https://images.unsplash.com/photo-1667845210425-5f805be2f355?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2Njk2NzUwODU&ixlib=rb-4.0.3&q=80>
+        </div>
+        <div class="content-container">
+          <p>In the summer of 2020, we reported our representation data and committed to doing so annually. One year later, we are please to share an update on our goals, and progress, and the work that still needs to be done.</p>
+          <a href="" class="learn-more-btn section-four-btn">Read More</a>
+        </div>
+      </div>
+    </section>
     
-    var map = {};
-    var ax = ['0','red','mercedes','3.14','3'];
-    var answer = '';
-    var total = 0;
-    var ttl = 0;
-    var g;
-    var c = 0;
-
-    jQuery('.mm-survey-item input:checked').each(function(index, val) {
-        var item;
-        var data;
-        var name;
-        var n;
-
-        item = jQuery(this);
-        data = item.val();
-        name = item.data('item');
-        n = parseInt(data);
-        total += n;
-
-        map[name] = data;
-
-    });
-
-    jQuery('.mm-survey-results-container .mm-survey-results-list').html('');
-
-    for (i = 1; i <= count; i++) {
-
-        var t = {};
-        var m = {};
-        answer += map[i] + '<br>';
+    <!-- Section six -->
+    <section class="section-six">
+      <div class="flex-group">
+        <div>
+          <img src=https://images.unsplash.com/photo-1667212805718-771e5ebdd8a5?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2Njk2NzYyMjg&ixlib=rb-4.0.3&q=80>
+        </div>
+        <div class="content-container">
+          <p>In the summer of 2020, we reported our representation data and committed to doing so annually. One year later, we are please to share an update on our goals, and progress, and the work that still needs to be done.</p>
+          <a href="" class="learn-more-btn section-four-btn">What We Do</a>
+        </div>
+      </div>
+    </section>  
+    
+  <!-- Section Seven -->  
+  
+    <section class="section-seven">
+          <h3>We enrich human lives through the thoughtful application of design and technology</h3>
+          <a href="" class="learn-more-btn section-seven-btn">Our Work</a>  
+    </section>
+    
+  <!-- Section Eight -->
+    <section class="section-eight">
+      <div class="flex-group-eight">
+        <div>
+          <img src=https://images.unsplash.com/photo-1667684550725-71e60ab8368e?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2Njk2Nzc2NDk&ixlib=rb-4.0.3&q=80>
+          <h4>Levi's</h4>
+          <p>We partner with Levi's, an icon of American industry and culture, to to reimagine levi.com for a new generation of shoppers and the digital future of retail.</p>
+        </div>
         
-        if( map[i] === ax[i]) {
-            g = map[i];
-            p = 'correct';
-            c = 1;
-        }
-        else {
-            g = map[i];
-            p = 'incorrect';
-            c = 0;
-        }
-
-        jQuery('.mm-survey-results-list').append('<li class="mm-survey-results-item '+p+'"><span class="mm-item-number">'+i+'</span><span class="mm-item-info">'+g+' - '+p+'</span></li>');
-
-        m[i] = c;
-        ttl += m[i];
-
-    }
-
-    var results;
-    results = ( ( ttl / count ) * 100 ).toFixed(0);
-
-    jQuery('.mm-survey-results-score').html( results + '%' );
-
-}
-
-function goBack() {
-    jQuery('.mm-back-btn').on('click', function() {
-        jQuery('.mm-survey-bottom').slideDown();
-        jQuery('.mm-survey-results').slideUp();
-    });
-}
-</script>
-</body>
-</html>
-
+        <div>
+          <img src=https://images.unsplash.com/photo-1666845267403-191d298cf198?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2Njk2OTEzOTc&ixlib=rb-4.0.3&q=80>
+          <h4>Dropbox Brand Campaign</h4>
+          <p>Dropbox is on a path to becoming a multi-product company. To bring their customers now and old along for that journey, we helped reimagine how Dropbox engages with their audience.</p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Section Nine -->
+    
+    <section class="section-nine">
+      <div class="logo-container">
+        <svg viewBox="0 0 448 512" width="100" title="address-book">
+    <path d="M436 160c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-20V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h320c26.5 0 48-21.5 48-48v-48h20c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-20v-64h20c6.6 0 12-5.4 12-12v-40c0-6.6-5.4-12-12-12h-20v-64h20zm-228-32c35.3 0 64 28.7 64 64s-28.7 64-64 64-64-28.7-64-64 28.7-64 64-64zm112 236.8c0 10.6-10 19.2-22.4 19.2H118.4C106 384 96 375.4 96 364.8v-19.2c0-31.8 30.1-57.6 67.2-57.6h5c12.3 5.1 25.7 8 39.8 8s27.6-2.9 39.8-8h5c37.1 0 67.2 25.8 67.2 57.6v19.2z" />
+  </svg>
+        <svg viewBox="0 0 576 512" width="100" title="trophy">
+    <path d="M552 64H448V24c0-13.3-10.7-24-24-24H152c-13.3 0-24 10.7-24 24v40H24C10.7 64 0 74.7 0 88v56c0 35.7 22.5 72.4 61.9 100.7 31.5 22.7 69.8 37.1 110 41.7C203.3 338.5 240 360 240 360v72h-48c-35.3 0-64 20.7-64 56v12c0 6.6 5.4 12 12 12h296c6.6 0 12-5.4 12-12v-12c0-35.3-28.7-56-64-56h-48v-72s36.7-21.5 68.1-73.6c40.3-4.6 78.6-19 110-41.7 39.3-28.3 61.9-65 61.9-100.7V88c0-13.3-10.7-24-24-24zM99.3 192.8C74.9 175.2 64 155.6 64 144v-16h64.2c1 32.6 5.8 61.2 12.8 86.2-15.1-5.2-29.2-12.4-41.7-21.4zM512 144c0 16.1-17.7 36.1-35.3 48.8-12.5 9-26.7 16.2-41.8 21.4 7-25 11.8-53.6 12.8-86.2H512v16z" />
+  </svg>
+        <svg viewBox="0 0 640 512" width="100" title="warehouse">
+    <path d="M504 352H136.4c-4.4 0-8 3.6-8 8l-.1 48c0 4.4 3.6 8 8 8H504c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8zm0 96H136.1c-4.4 0-8 3.6-8 8l-.1 48c0 4.4 3.6 8 8 8h368c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8zm0-192H136.6c-4.4 0-8 3.6-8 8l-.1 48c0 4.4 3.6 8 8 8H504c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8zm106.5-139L338.4 3.7a48.15 48.15 0 0 0-36.9 0L29.5 117C11.7 124.5 0 141.9 0 161.3V504c0 4.4 3.6 8 8 8h80c4.4 0 8-3.6 8-8V256c0-17.6 14.6-32 32.6-32h382.8c18 0 32.6 14.4 32.6 32v248c0 4.4 3.6 8 8 8h80c4.4 0 8-3.6 8-8V161.3c0-19.4-11.7-36.8-29.5-44.3z" />
+  </svg>
+      </div>
+    </section>
+    
+    <section class="section-ten">
+      <h3>We'd love to be your partner</h3>
+      <a href="" class="learn-more-btn section-ten-btn">Get In Touch</a>
+    </section>
+    
+  </body>
+  </html>
