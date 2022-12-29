@@ -172,12 +172,12 @@ nav a:hover {
 
 
 .learn-more-btn {
-  background: white;
+  background: transparent;
   padding: 10px 20px;
   border-radius: 50px;
   font-size: .8rem;
   text-decoration: none;
-  color: black;
+  color: white;
   margin-right: 2% !important;
   font-family: 'Poppins', sans-serif;
 }
