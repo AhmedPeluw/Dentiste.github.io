@@ -166,7 +166,7 @@ nav a:hover {
 .section-one-paragraph {
   margin: 2rem 0;
   width: 70%;
-  max-width: 500px;
+  /* max-width: 500px; */
   line-height: 1.5rem;
 }
 
