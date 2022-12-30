@@ -357,6 +357,10 @@ nav a:hover {
   width: 80%;
 }
 
+.modal-content p {
+  color: #000 !important;
+}
+
 
 /* The Close Button */
 .close {
