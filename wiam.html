@@ -330,9 +330,10 @@ $(document).ready(function() {
 });
       </script>
       <script>
-        function bigImg(e) {
-          
-          e.style.display = "block";
+        function bigImg(this) {
+          alert("hkgkjhg");
+          var el = this[0];
+          this.style.display = "block";
         }
       </script>
     
