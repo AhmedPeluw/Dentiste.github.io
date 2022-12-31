@@ -186,7 +186,7 @@ body{
           <div class="col-md-12">
             <div id="news-slider" class="owl-carousel">
               
-              <div class="post-slide">
+              <div class="post-slide" onmouseover="bigImg(this)">
                 <div class="post-cont">
                   <div class="post-img">
                     <img src="https://images.unsplash.com/photo-1596265371388-43edbaadab94?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=301&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=501" alt="">
@@ -206,7 +206,7 @@ body{
                 </div>
               </div>
               
-              <div class="post-slide">
+              <div class="post-slide" onmouseover="bigImg(this)">
                 <div class="post-cont">
                   <div class="post-img">
                     <img src="https://images.unsplash.com/photo-1596265371388-43edbaadab94?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=301&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=501" alt="">
@@ -226,7 +226,7 @@ body{
                 </div>
               </div>
 
-              <div class="post-slide">
+              <div class="post-slide" onmouseover="bigImg(this)">
                 <div class="post-cont">
                   <div class="post-img">
                     <img src="https://images.unsplash.com/photo-1596265371388-43edbaadab94?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=301&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=501" alt="">
@@ -246,7 +246,7 @@ body{
                 </div>
               </div>
 
-              <div class="post-slide">
+              <div class="post-slide" onmouseover="bigImg(this)">
                 <div class="post-cont">
                   <div class="post-img">
                     <img src="https://images.unsplash.com/photo-1596265371388-43edbaadab94?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=301&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=501" alt="">
@@ -266,7 +266,7 @@ body{
                 </div>
               </div>
 
-              <div class="post-slide">
+              <div class="post-slide" onmouseover="bigImg(this)">
                 <div class="post-cont">
                   <div class="post-img">
                     <img src="https://images.unsplash.com/photo-1596265371388-43edbaadab94?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=301&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=501" alt="">
@@ -286,7 +286,7 @@ body{
                 </div>
               </div>
 
-              <div class="post-slide">
+              <div class="post-slide" onmouseover="bigImg(this)">
                 <div class="post-cont">
                   <div class="post-img">
                     <img src="https://images.unsplash.com/photo-1596265371388-43edbaadab94?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=301&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=80&w=501" alt="">
@@ -328,6 +328,12 @@ $(document).ready(function() {
         autoPlay:true
     });
 });
+      </script>
+      <script>
+        function bigImg(e) {
+          
+          e.style.display = "block";
+        }
       </script>
     
 </body>
