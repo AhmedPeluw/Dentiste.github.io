@@ -1,34 +1,69 @@
 <html>
   <head>
     <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f2f2f2;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 40px;
+      }
+      h1 {
+        margin-top: 0;
+      }
+      img {
+        margin-bottom: 20px;
+      }
+      .answers {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 20px;
+      }
       .answer {
-        position: absolute;
-        width: 100px;
+        position: relative;
+        width: 120px;
         height: 50px;
+        margin: 20px;
         padding: 10px;
-        border: 1px solid black;
+        border: 1px solid #ccc;
         background-color: lightblue;
+        text-align: center;
         user-select: none;
       }
       .target {
         position: absolute;
         width: 120px;
         height: 70px;
-        border: 1px solid black;
+        border: 1px solid #ccc;
         background-color: lightgreen;
       }
     </style>
   </head>
   <body>
-    <img src="mouth.png" width="400" height="300">
-    <div id="brush" class="answer">brush</div>
-    <div id="floss" class="answer">floss</div>
-    <div id="visit_dentist" class="answer">visit dentist</div>
-    <div id="eat_healthy" class="answer">eat healthy</div>
-    <div id="brush_target" class="target"></div>
-    <div id="floss_target" class="target"></div>
-    <div id="visit_dentist_target" class="target"></div>
-    <div id="eat_healthy_target" class="target"></div>
+    <div class="container">
+      <h1>Dental Care Exercise</h1>
+      <img src="mouth.png" width="400" height="300">
+      <div class="answers">
+        <div id="brush" class="answer">brush</div>
+        <div id="floss" class="answer">floss</div>
+        <div id="visit_dentist" class="answer">visit dentist</div>
+        <div id="eat_healthy" class="answer">eat healthy</div>
+      </div>
+      <div id="brush_target" class="target"></div>
+      <div id="floss_target" class="target"></div>
+      <div id="visit_dentist_target" class="target"></div>
+      <div id="eat_healthy_target" class="target"></div>
+    </div>
     <script>
       const answers = document.querySelectorAll(".answer");
       const targets = document.querySelectorAll(".target");
@@ -51,7 +86,7 @@
             e.target.appendChild(currentAnswer);
           }
         });
-      });
+    });
     </script>
   </body>
 </html>
