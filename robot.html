@@ -1,0 +1,57 @@
+<html>
+  <head>
+    <style>
+      .answer {
+        position: absolute;
+        width: 100px;
+        height: 50px;
+        padding: 10px;
+        border: 1px solid black;
+        background-color: lightblue;
+        user-select: none;
+      }
+      .target {
+        position: absolute;
+        width: 120px;
+        height: 70px;
+        border: 1px solid black;
+        background-color: lightgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="mouth.png" width="400" height="300">
+    <div id="brush" class="answer">brush</div>
+    <div id="floss" class="answer">floss</div>
+    <div id="visit_dentist" class="answer">visit dentist</div>
+    <div id="eat_healthy" class="answer">eat healthy</div>
+    <div id="brush_target" class="target"></div>
+    <div id="floss_target" class="target"></div>
+    <div id="visit_dentist_target" class="target"></div>
+    <div id="eat_healthy_target" class="target"></div>
+    <script>
+      const answers = document.querySelectorAll(".answer");
+      const targets = document.querySelectorAll(".target");
+      let currentAnswer = null;
+
+      answers.forEach(answer => {
+        answer.addEventListener("dragstart", e => {
+          currentAnswer = e.target;
+        });
+      });
+
+      targets.forEach(target => {
+        target.addEventListener("dragover", e => {
+          e.preventDefault();
+        });
+
+        target.addEventListener("drop", e => {
+          e.preventDefault();
+          if (e.target.classList.contains("target")) {
+            e.target.appendChild(currentAnswer);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
