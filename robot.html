@@ -18,6 +18,8 @@
       }
       h1 {
         margin-top: 0;
+        font-weight: bold;
+        font-size: 36px;
       }
       img {
         margin-bottom: 20px;
@@ -36,16 +38,24 @@
         margin: 20px;
         padding: 10px;
         border: 1px solid #ccc;
-        background-color: lightblue;
+        background-color: #007aff;
+        color: white;
         text-align: center;
+        font-weight: bold;
+        font-size: 16px;
         user-select: none;
+        transition: all 0.3s ease-in-out;
+      }
+      .answer:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
       }
       .target {
         position: absolute;
         width: 120px;
         height: 70px;
         border: 1px solid #ccc;
-        background-color: lightgreen;
+        background-color: #00ff00;
       }
     </style>
   </head>
@@ -71,7 +81,7 @@
 
       answers.forEach(answer => {
         answer.addEventListener("dragstart", e => {
-          currentAnswer = e.target;
+          currentAnswer = answer;
         });
       });
 
@@ -80,13 +90,19 @@
           e.preventDefault();
         });
 
-        target.addEventListener("drop", e => {
-          e.preventDefault();
-          if (e.target.classList.contains("target")) {
-            e.target.appendChild(currentAnswer);
-          }
+        target.addEventListener("dragenter", e => {
+          e.target.style.backgroundColor = "#00ff00";
         });
-    });
+
+        target.addEventListener("dragleave", e => {
+          e.target.style.backgroundColor = "#00ff00";
+        });
+
+        target.addEventListener("drop", e => {
+          e.target.style.backgroundColor = "#00ff00";
+          e.target.appendChild(currentAnswer);
+        });
+      });
     </script>
   </body>
 </html>
