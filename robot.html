@@ -1,83 +1,89 @@
+<!DOCTYPE html>
 <html>
   <head>
     <style>
+      /* Add styles to make the page look more visually appealing */
       body {
+        background-color: #F2F2F2;
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         height: 100vh;
-        background-color: #f2f2f2;
       }
-      .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: white;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        padding: 40px;
+
+      .answer {
+        background-color: #3F51B5;
+        color: white;
+        padding: 10px;
+        border-radius: 10px;
+        cursor: pointer;
+        margin: 20px;
+        text-align: center;
+        animation: moveInRight 0.5s ease-out;
       }
-      h1 {
-        margin-top: 0;
-        font-weight: bold;
-        font-size: 36px;
-      }
-      img {
-        margin-bottom: 20px;
-      }
-      .answers {
+
+      .target {
+        background-color: #E0E0E0;
+        border: 2px dashed #333;
+        width: 200px;
+        height: 200px;
+        border-radius: 10px;
+        margin: 20px;
+        text-align: center;
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-wrap: wrap;
-        margin-top: 20px;
+        animation: moveInLeft 0.5s ease-out;
       }
-      .answer {
-        position: relative;
-        width: 120px;
-        height: 50px;
-        margin: 20px;
-        padding: 10px;
-        border: 1px solid #ccc;
-        background-color: #007aff;
-        color: white;
-        text-align: center;
-        font-weight: bold;
-        font-size: 16px;
-        user-select: none;
-        transition: all 0.3s ease-in-out;
+
+      /* Add animations */
+      @keyframes moveInRight {
+        0% {
+          opacity: 0;
+          transform: translateX(100px);
+        }
+
+        100% {
+          opacity: 1;
+          transform: translateX(0);
+        }
       }
-      .answer:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-      }
-      .target {
-        position: absolute;
-        width: 120px;
-        height: 70px;
-        border: 1px solid #ccc;
-        background-color: #00ff00;
+
+      @keyframes moveInLeft {
+        0% {
+          opacity: 0;
+          transform: translateX(-100px);
+        }
+
+        100% {
+          opacity: 1;
+          transform: translateX(0);
+        }
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <h1>Dental Care Exercise</h1>
-      <img src="mouth.png" width="400" height="300">
-      <div class="answers">
-        <div id="brush" class="answer">brush</div>
-        <div id="floss" class="answer">floss</div>
-        <div id="visit_dentist" class="answer">visit dentist</div>
-        <div id="eat_healthy" class="answer">eat healthy</div>
-      </div>
-      <div id="brush_target" class="target"></div>
-      <div id="floss_target" class="target"></div>
-      <div id="visit_dentist_target" class="target"></div>
-      <div id="eat_healthy_target" class="target"></div>
+      <!-- Add answers -->
+      <div class="answer" draggable="true">Answer 1</div>
+      <div class="answer" draggable="true">Answer 2</div>
+      <div class="answer" draggable="true">Answer 3</div>
+      <!-- Add targets -->
+      <div class="target">Target 1</div>
+      <div class="target">Target 2</div>
+      <div class="target">Target 3</div>
     </div>
+
     <script>
+      // Add the drag and drop functionality
       const answers = document.querySelectorAll(".answer");
       const targets = document.querySelectorAll(".target");
-      let currentAnswer = null;
+      let currentAnswer;
 
       answers.forEach(answer => {
         answer.addEventListener("dragstart", e => {
@@ -95,11 +101,13 @@
         });
 
         target.addEventListener("dragleave", e => {
-          e.target.style.backgroundColor = "#00ff00";
+          e.target.style.backgroundColor = "#E0E0E0";
+
         });
 
         target.addEventListener("drop", e => {
-          e.target.style.backgroundColor = "#00ff00";
+          e.preventDefault();
+          e.target.style.backgroundColor = "#E0E0E0";
           e.target.appendChild(currentAnswer);
         });
       });
